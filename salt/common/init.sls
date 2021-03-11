@@ -1,3 +1,4 @@
 include:
   - common.packages
-  - common.users
+  - common.salt_user
+#  - common.users
