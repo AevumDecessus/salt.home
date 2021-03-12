@@ -3,4 +3,4 @@ common_packages:
     - pkgs:
       - htop
       - jq
-      - vim
+      - {{ salt['pillar.get']('packages:vim') }}
