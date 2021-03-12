@@ -9,6 +9,7 @@ Install step cli:
     - if_missing: /usr/local/bin/step
     - user: salt
     - group: salt
-#Bootstrap CA:
-#  cmd.run:
-#    - name: /usr/local/bin/step ca bootstrap --ca-url={{ salt['pillar.get']('step_client:ca-url') }} --fingerprint={{ salt['pillar.get']('step_client:fingerprint') }} --install
+Bootstrap CA:
+  cmd.run:
+    - name: /usr/local/bin/step ca bootstrap --ca-url={{ salt['pillar.get']('step_client:ca-url') }} --fingerprint={{ salt['pillar.get']('step_client:fingerprint') }} --install
+    - creates:  /root/.step/certs/root_ca.crt
