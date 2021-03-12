@@ -5,6 +5,9 @@ step_client:
   {% if grains['cpuarch'] == 'armv7l' %}
   arch: armv7
   hash: sha256=ac25f5308dc0ca5da971fd8c7433544bd6960dd3bd7e0eb8519631d0006eb51d
+  {% elif grains['cpuarch'] == 'aarch64' %}
+  arch: arm64
+  hash: sha256=327f0ddd0a77b11c683f12b30eb2744ccfed0a78cda9a3940bedbad059daed03
   {% else %}
   arch: amd64
   hash: sha256=f1c20bea85b68692cbd18b2f6581617f4490dc529137f6c56cbc386bf545ca43
