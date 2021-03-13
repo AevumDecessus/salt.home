@@ -7,6 +7,7 @@ fileserver_backend:
 gitfs_remotes:
   - https://github.com/AevumDecessus/chrony-formula.git
   - https://github.com/AevumDecessus/docker-formula.git
+  - https://github.com/AevumDecessus/salt-formula-mosquitto.git
   - https://github.com/AevumDecessus/zabbix-formula.git
 
 file_ignore_regex:
