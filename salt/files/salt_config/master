@@ -1,1 +1,25 @@
 user: salt
+
+fileserver_backend:
+  - roots
+  - gitfs
+
+gitfs_remotes:
+  - https://github.com/AevumDecessus/chrony-formula.git
+  - https://github.com/AevumDecessus/docker-formula.git
+  - https://github.com/AevumDecessus/zabbix-formula.git
+
+file_ignore_regex:
+  - '/\.svn($|/)'
+  - '/\.git($|/)'
+
+file_ignore_glob:
+  - '\*.md'
+  - '\*.pyc'
+  - '\*.rst'
+  - '\*.swp'
+  - 'CODEOWNERS'
+  - 'FORMULA'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'LICENSE'

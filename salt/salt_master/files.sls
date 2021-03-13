@@ -1,10 +1,23 @@
-update salt master config:
-  file.managed:
+salt-master:
+  pkg:
+    - installed
+    - name: salt-master
+  file:
+    - managed
     - name: /etc/salt/master
     - source: salt://files/salt_config/master
     - user: salt
     - group: salt
     - mode: 644
+    - order: last
+    - require:
+      - pkg: salt-master
+restart the master:
+  cmd.run:
+    - name: 'salt-call service.restart salt-master'
+    - bg: True
+    - onchanges:
+      - file: salt-master
 Update salt master log directory:
   file.directory:
     - name: /var/log/salt
