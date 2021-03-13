@@ -1,6 +1,7 @@
 step_client:
   ca-url: https://tinyca.home.0n5.us
   fingerprint: 23138bcd7244b5d3a7fd88c9d09ebe320fa303ac00c137e11b188f5e78c8f82b 
+  kid: EA-2q4Yz1vLg5WAMm7ALFKSVVv5G3qa9u6MLBbkqu0U
   version: 0.15.13
   {% if grains['cpuarch'] == 'armv7l' %}
   arch: armv7
