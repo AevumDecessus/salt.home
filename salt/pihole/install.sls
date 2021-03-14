@@ -8,14 +8,6 @@ pre-make etc pihole directory:
     - user: root
     - group: root
     - dir_mode: 755
-touch the setupvars file: 
-  file.managed:
-    - name: /etc/pihole/setupVars.conf
-    - source: salt://pihole/setupVars.conf
-    - user: root
-    - group: root
-    - mode: 644
-    - template: jinja
 install pihole:
   cmd.run:
     - name: bash -x ./basic-install.sh --unattended
@@ -24,3 +16,5 @@ install pihole:
       - TERM: xterm
     - creates:
       - /etc/pihole/install.log
+    - requires:
+      - file.managed: /etc/pihole/setupVars.conf
