@@ -9,6 +9,6 @@ manage the setupvars file:
     - requires:
       - file.directory: /etc/pihole
   cmd.run:
-    - name: pihole -r
+    - name: pihole restartdns
     - onchanges:
       - file: /etc/pihole/setupVars.conf
