@@ -20,6 +20,27 @@ admin_group:
     - gid: 4242
     - members:
       - fixer
+nuke default pi user:
+  user.absent:
+    - name: pi
+  group.absent:
+    - name: pi
+nuke default ubuntu user:
+  user.absent:
+    - name: ubuntu
+  group.absent:
+    - name: ubuntu
+nuke default centos user:
+  user.absent:
+    - name: centos
+  group.absent:
+    - name: centos
+nuke default wheel group:
+  group.absent:
+    - name: wheel
+nuke default sudo group:
+  group.absent:
+    - name: sudo
 media_users:
   group.present:
     - name: media
