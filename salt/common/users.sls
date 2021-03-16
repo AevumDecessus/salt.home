@@ -14,9 +14,7 @@ fixer_users:
   ssh_auth.manage:
     - user: fixer
     - enc: ed25519
-    - comment: aevum_2021_03_15
-    - ssh_keys:
-      - AAAAC3NzaC1lZDI1NTE5AAAAIImlLeTqPZDaVe9RMc+LSKUnaTaOlTxvvdefx6CJg9E4
+    - source: salt://files/ssh_keys/fixer_keys
 admin_group:
   group.present:
     - name: admin
