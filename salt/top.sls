@@ -7,3 +7,5 @@ base:
     - pihole
   'salt.*':
     - salt_master
+  'secrets.*':
+    - vault

@@ -3,9 +3,6 @@ fixer_users:
     - name: fixer
     - gid: 7654
     - system: False
-  user.absent:
-    - name: fixer_users
-fixed_fixer:
   user.present:
     - name: fixer
     - fullname: Fixer User
@@ -14,6 +11,12 @@ fixed_fixer:
     - uid: 7654
     - gid: 7654
     - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
+  ssh_auth.manage:
+    - user: fixer
+    - enc: ed25519
+    - comment: aevum_2021_03_15
+    - ssh_keys:
+      - AAAAC3NzaC1lZDI1NTE5AAAAIImlLeTqPZDaVe9RMc+LSKUnaTaOlTxvvdefx6CJg9E4
 admin_group:
   group.present:
     - name: admin
