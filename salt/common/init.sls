@@ -4,3 +4,4 @@ include:
   - common.salt_user
   - common.step_client
   - common.users
+  - sudoers
