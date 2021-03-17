@@ -13,3 +13,17 @@ Bootstrap CA:
   cmd.run:
     - name: /usr/local/bin/step ca bootstrap --ca-url={{ salt['pillar.get']('step_client:ca-url') }} --fingerprint={{ salt['pillar.get']('step_client:fingerprint') }} --install
     - creates:  /root/.step/certs/root_ca.crt
+Install step systemd unit:
+  file.managed:
+    - name: /etc/systemd/system/cert-renewer@.service
+    - source: salt://files/common/step_client/cert-renewer.service
+    - user: root
+    - group: root
+    - mode: 755
+Install step systemd timer:
+  file.managed:
+    - name: /etc/systemd/system/cert-renewer@.timer
+    - source: salt://files/common/step_client/cert-renewer.timer
+    - user: root
+    - group: root
+    - mode: 755
