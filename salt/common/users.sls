@@ -10,6 +10,7 @@ fixer_users:
     - home: /home/fixer
     - uid: 7654
     - gid: 7654
+    - createhome: true
     - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
   ssh_auth.manage:
     - user: fixer
