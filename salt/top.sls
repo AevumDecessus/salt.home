@@ -9,3 +9,4 @@ base:
     - salt_master
   'secrets.*':
     - vault
+    - secrets.vault_cert

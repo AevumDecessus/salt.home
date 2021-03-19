@@ -8,7 +8,7 @@ vault:
         path: /var/lib/vault/data
     listener:
       tcp:
-        address: "127.0.0.1:8200"
-        tls_disable: True
-        tls_cert_file: ""
-        tls_key_file: ""
+        address: "secrets.home.0n5.us:8200"
+        tls_disable: False
+        tls_cert_file: "/etc/step-ca/certs/vault/vault.crt"
+        tls_key_file: "/etc/step-ca/keys/vault/vault.key"

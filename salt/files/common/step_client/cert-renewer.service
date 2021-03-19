@@ -9,8 +9,8 @@ Type=oneshot
 User=root
 
 Environment=STEPPATH=/etc/step-ca \
-            CERT_LOCATION=/etc/step/certs/%i.crt \
-            KEY_LOCATION=/etc/step/certs/%i.key
+            CERT_LOCATION=/etc/step-ca/certs/%i/%i.crt \
+            KEY_LOCATION=/etc/step-ca/keys/%i/%i.key
 
 ; ExecStartPre checks if the certificate is ready for renewal,
 ; based on the exit status of the command.
@@ -22,7 +22,7 @@ ExecStartPre=/usr/bin/bash -c \
            - now) <= 0" > /dev/null'
 
 ; ExecStart renews the certificate, if ExecStartPre was successful.
-ExecStart=/usr/bin/step ca renew --force $CERT_LOCATION $KEY_LOCATION
+ExecStart=/usr/local/bin/step ca renew --force $CERT_LOCATION $KEY_LOCATION
 
 ; Try to reload or restart the systemd service that relies on this cert-renewer
 ExecStartPost=/usr/bin/bash -c 'systemctl --quiet is-enabled %i && systemctl try-reload-or-restart %i'
