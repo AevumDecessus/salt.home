@@ -1,29 +1,3 @@
-fixer_users:
-  group.present:
-    - name: fixer
-    - gid: 7654
-    - system: False
-  user.present:
-    - name: fixer
-    - fullname: Fixer User
-    - shell: /bin/bash
-    - home: /home/fixer
-    - uid: 7654
-    - gid: 7654
-    - createhome: true
-    - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
-  ssh_auth.manage:
-    - user: fixer
-    - source: salt://files/ssh_keys/fixer_keys
-    - ssh_keys:
-      - AAAAC3NzaC1lZDI1NTE5AAAAIKguioxb528BXrSrJ/3v4eSBX2zi1ukPzadIuIvKQhZ5
-      - AAAAC3NzaC1lZDI1NTE5AAAAIImlLeTqPZDaVe9RMc+LSKUnaTaOlTxvvdefx6CJg9E4
-admin_group:
-  group.present:
-    - name: admin
-    - gid: 4242
-    - members:
-      - fixer
 nuke default pi user:
   user.absent:
     - name: pi
@@ -73,3 +47,31 @@ secure_users:
   group.present:
     - name: secure
     - gid: 2007
+fixer_users:
+  group.present:
+    - name: fixer
+    - gid: 7654
+    - system: False
+  user.present:
+    - name: fixer
+    - fullname: Fixer User
+    - shell: /bin/bash
+    - home: /home/fixer
+    - uid: 7654
+    - gid: 7654
+    - createhome: true
+    - optional_groups:
+      - media
+    - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
+  ssh_auth.manage:
+    - user: fixer
+    - source: salt://files/ssh_keys/fixer_keys
+    - ssh_keys:
+      - AAAAC3NzaC1lZDI1NTE5AAAAIKguioxb528BXrSrJ/3v4eSBX2zi1ukPzadIuIvKQhZ5
+      - AAAAC3NzaC1lZDI1NTE5AAAAIImlLeTqPZDaVe9RMc+LSKUnaTaOlTxvvdefx6CJg9E4
+admin_group:
+  group.present:
+    - name: admin
+    - gid: 4242
+    - members:
+      - fixer
