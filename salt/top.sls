@@ -9,4 +9,6 @@ base:
     - salt_master
   'secrets.*':
     - vault
-    - secrets.vault_cert
+    - secrets
+  'zabbix.*':
+    - zabbix_master
