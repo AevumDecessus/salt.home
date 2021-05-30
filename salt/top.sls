@@ -5,6 +5,8 @@ base:
     - koha
   'mqtt.*':
     - mosquitto
+  'openassistant.*':
+    - home_assistant
   'pihole.*':
     - pihole
   'salt.*':
