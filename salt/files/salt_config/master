@@ -8,6 +8,8 @@ gitfs_remotes:
   - https://github.com/AevumDecessus/chrony-formula.git
   - https://github.com/AevumDecessus/docker-formula.git
   - https://github.com/AevumDecessus/openssh-formula.git
+  - https://github.com/AevumDecessus/salt-formula-home-assistant.git
+  - https://github.com/AevumDecessus/salt-formula-linux.git
   - https://github.com/AevumDecessus/salt-formula-mosquitto.git
   - https://github.com/AevumDecessus/sudoers-formula.git
   - https://github.com/AevumDecessus/vault-formula.git

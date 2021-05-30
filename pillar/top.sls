@@ -1,8 +1,12 @@
 base:
   '*':
     - common
+  'koha.*':
+    - koha
   'mqtt.*':
     - mqtt.server
+  'openassistant.*':
+    - open_assistant.server
   'pihole.*':
     - pihole.setupvars
   'secrets.*':

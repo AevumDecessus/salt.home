@@ -1,6 +1,8 @@
 base:
   '*':
     - common
+  'koha.*':
+    - koha
   'mqtt.*':
     - mosquitto
   'pihole.*':
