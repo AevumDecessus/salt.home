@@ -4,6 +4,8 @@ fileserver_backend:
   - roots
   - gitfs
 
+extension_modules: /srv/salt/extmods
+
 gitfs_remotes:
   - https://github.com/AevumDecessus/chrony-formula.git
   - https://github.com/AevumDecessus/docker-formula.git
