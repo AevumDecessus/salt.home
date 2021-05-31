@@ -4,7 +4,7 @@ fileserver_backend:
   - roots
   - gitfs
 
-extension_modules: /srv/salt/extmods
+extension_modules: /srv/extmods
 
 gitfs_remotes:
   - https://github.com/AevumDecessus/chrony-formula.git
