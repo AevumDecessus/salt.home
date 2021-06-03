@@ -63,15 +63,22 @@ fixer_users:
     - optional_groups:
       - media
     - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
+    - require:
+      - group: fixer
+      - group: media
   ssh_auth.manage:
     - user: fixer
     - source: salt://files/ssh_keys/fixer_keys
     - ssh_keys:
       - AAAAC3NzaC1lZDI1NTE5AAAAIKguioxb528BXrSrJ/3v4eSBX2zi1ukPzadIuIvKQhZ5
       - AAAAC3NzaC1lZDI1NTE5AAAAIImlLeTqPZDaVe9RMc+LSKUnaTaOlTxvvdefx6CJg9E4
+    - require:
+      - user: fixer
 admin_group:
   group.present:
     - name: admin
     - gid: 4242
     - members:
       - fixer
+    - require:
+      - user: fixer
