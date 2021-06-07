@@ -1,6 +1,8 @@
 base:
   '*':
     - common
+  'files.*':
+    - nfs_server
   'koha.*':
     - koha
   'mqtt.*':
