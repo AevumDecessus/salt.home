@@ -16,5 +16,7 @@ base:
   'secrets.*':
     - vault
     - secrets
+  'speedy.*'
+    - docker_host
   'zabbix.*':
     - zabbix_master
