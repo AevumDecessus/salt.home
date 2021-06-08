@@ -66,7 +66,7 @@ fixer_users:
     - require:
       - group: fixer
       - group: media
-  ssh_auth.manage:
+  ssh_auth.present:
     - user: fixer
     - source: salt://files/ssh_keys/fixer_keys
     - ssh_keys:
