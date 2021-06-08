@@ -15,5 +15,5 @@ base:
     - secrets.vault_server
   'server.*':
     - db_config
-  'speedy.*'
+  'speedy.*':
     - docker_host
