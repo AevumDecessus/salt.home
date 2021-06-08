@@ -12,7 +12,7 @@ base:
   'pihole.*':
     - pihole
   'salt.*':
-    - salt_master
+    - salt
   'secrets.*':
     - vault
     - secrets

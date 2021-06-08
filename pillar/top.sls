@@ -9,6 +9,8 @@ base:
     - open_assistant.server
   'pihole.*':
     - pihole.setupvars
+  'salt.*':
+    - salt_master
   'secrets.*':
     - secrets.vault_server
   'server.*':
