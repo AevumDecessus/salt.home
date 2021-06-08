@@ -1,6 +1,8 @@
 base:
   '*':
     - common
+  'bastion.*':
+    - bastion
   'files.*':
     - nfs_server
   'koha.*':
