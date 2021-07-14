@@ -62,6 +62,9 @@ fixer_users:
     - createhome: true
     - optional_groups:
       - media
+      - camera
+      - calibre
+      - misc
     - password: $6$9g9XjICLGkbiIFcR$lI8UBhWs7wxhEohYj1BbxrEy.X6yoXuJWADbsfWOo.0X2NljahUHjyBv9MkagHsx9hXjWBUej7hYu0E2P/9zB0
     - require:
       - group: fixer
