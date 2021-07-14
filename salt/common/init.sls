@@ -1,4 +1,5 @@
 include:
+  - common.dotfiles
   - common.packages
   - common.resolv
   - common.salt_user
