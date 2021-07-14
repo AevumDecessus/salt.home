@@ -4,6 +4,7 @@ common_packages:
       - htop
       - git
       - jq
+      - rsync
       - screen
       - tar
       - {{ salt['pillar.get']('packages:vim') }}
