@@ -9,5 +9,7 @@ Run dotfiles install:
   cmd.run:
     - name: /home/fixer/dotfiles/install
     - runas: fixer
+    - creates:
+      - /home/fixer/.dotfiles_version
     - require:
       - git: 'Update dotfiles repo'
