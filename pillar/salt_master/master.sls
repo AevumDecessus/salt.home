@@ -10,6 +10,7 @@ salt:
     pillar_roots:
       base:
         - /srv/pillar
+    default_top: base
     user: salt
     module_dirs: 
       - /srv/extmods
