@@ -9,7 +9,7 @@ docker_user:
     - name: docker
     - fullname: Docker
     - shell: /bin/bash
-    - home: /fastdata/docker
+    - home: {{ salt['pillar.get']('docker_host:homedir') }}
     - uid: 3001
     - gid: 3001
     - createhome: true
