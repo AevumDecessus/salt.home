@@ -15,6 +15,9 @@ base:
     - open_assistant.server
   'pihole.*':
     - pihole.setupvars
+  'ptero.*':
+    - docker_host
+    - docker_host.home_daemon
   'salt.*':
     - salt_master
   'secrets.*':

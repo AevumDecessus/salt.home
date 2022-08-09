@@ -9,6 +9,7 @@ base:
     - nfs_server
   'homeassistant.*':
     - docker_host
+    - homeassistant
   'koha.*':
     - koha
   'library.*':
@@ -19,6 +20,8 @@ base:
     - home_assistant
   'pihole.*':
     - pihole
+  'ptero.*':
+    - docker_host
   'salt.*':
     - salt
   'secrets.*':
