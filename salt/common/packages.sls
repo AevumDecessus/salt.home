@@ -7,4 +7,5 @@ common_packages:
       - rsync
       - screen
       - tar
+      - tmux
       - {{ salt['pillar.get']('packages:vim') }}
