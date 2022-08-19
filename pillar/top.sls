@@ -14,6 +14,7 @@ base:
   'openassistant.*':
     - open_assistant.server
   'pihole.*':
+    - pihole.resolv
     - pihole.setupvars
   'ptero.*':
     - docker_host
