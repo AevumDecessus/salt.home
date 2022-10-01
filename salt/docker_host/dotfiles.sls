@@ -3,6 +3,7 @@ Update docker dotfiles repo:
     - name: https://github.com/aevumdecessus/dotfiles
     - target: /home/docker/dotfiles
     - user: docker
+    - force_reset: true
     - require:
       - sls: docker_host.user
 Run docker dotfiles install:
