@@ -5,3 +5,7 @@ Update resolv.conf:
     - group: root
     - template: jinja
     - source: salt://files/common/resolv.conf 
+Disable systemd-resolved:
+  service.dead:
+    - name: systemd-resolved
+    - enable: false
