@@ -9,3 +9,7 @@ Disable systemd-resolved:
   service.dead:
     - name: systemd-resolved
     - enable: false
+Disable resolveconf service:
+  service.dead:
+    - name: resolvconf
+    - enable: false
