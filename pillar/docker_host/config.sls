@@ -6,7 +6,7 @@ docker:
 {% if salt['grains.get']('cpuarch') == 'armv7l' %}
   pkg:
     docker:
-      version: '20.10.21'
+      version: '23.0.4'
       archive:
         source_hash: 5f49fa53197bfd315816a0f2d2a6b86b5f4d9d1058215ddd40ba2a96b1176726 
     compose:
@@ -17,9 +17,9 @@ docker:
 {% elif salt['grains.get']('cpuarch') == 'aarch64' %}
   pkg:
     docker:
-      version: '20.10.21'
+      version: '23.0.4'
       archive:
-        source_hash: 87a4219c54552797ffd38790b72832372a90eceb7c8e451c36a682093d57dae6
+        source_hash: a2d95045f5a6f6d41f83afefbbf6a53f4fcb919c86fb74bc67321ddf673698c2
 {% elif salt['grains.get']('cpuarch') == 'x86_64' %}
   pkg:
     docker:
@@ -29,7 +29,7 @@ docker:
 {% else %}
   pkg:
     docker:
-      version: '20.10.21'
+      version: '23.0.4'
       archive:
         source_hash: dd6ff72df1edfd61ae55feaa4aadb88634161f0aa06dbaaf291d1be594099ff3
 {% endif %}
