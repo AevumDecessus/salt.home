@@ -6,9 +6,8 @@ Install step cli:
     - archive_format: tar
     - enforce_toplevel: False
     - options: z --strip-components=2 step_{{ salt['pillar.get']('step_client:version', '0.15.13') }}/bin/step
-    - if_missing: /usr/local/bin/step
-    - user: salt
-    - group: salt
+    - unless:
+      - step --version | grep {{ salt['pillar.get']('step_client:version', '0.15.13') }}
 Bootstrap CA:
   cmd.run:
     - name: /usr/local/bin/step ca bootstrap --ca-url={{ salt['pillar.get']('step_client:ca-url') }} --fingerprint={{ salt['pillar.get']('step_client:fingerprint') }} --install
