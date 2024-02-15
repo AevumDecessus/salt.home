@@ -28,5 +28,7 @@ base:
   'speedy.*':
     - docker_host
     - docker_host.speedy_daemon
+  'tinyca.*':
+    - docker_host
   'zabbix.*':
     - zabbix/config

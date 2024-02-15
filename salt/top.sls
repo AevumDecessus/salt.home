@@ -31,5 +31,7 @@ base:
     - docker_host
   'speedy.*':
     - docker_host
+  'tinyca.*':
+    - docker_host
   'zabbix.*':
     - zabbix_master
