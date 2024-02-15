@@ -1,8 +1,12 @@
 vault:
-  version: 1.6.3
+  version: 1.15.5
   platform: linux_arm
   verify_download: True
   config:
+    log_level: info
+    log_file: /var/log/vault/vault
+    log_rotate_duration: 24h
+    log_rotate_max_files: 14
     storage:
       file:
         path: /var/lib/vault/data
