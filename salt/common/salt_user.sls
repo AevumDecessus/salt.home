@@ -8,7 +8,6 @@ salt user creation:
     - fullname: Salt User
     - shell: /bin/bash
     - home: /home/salt
-    - uid: 8913
     - gid: 8913
     - groups:
       - salt
