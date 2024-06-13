@@ -1,5 +1,6 @@
 include:
   - common.dotfiles
+  - common.motd
   - common.packages
   - common.resolv
   - common.salt_cron
